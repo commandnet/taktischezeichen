@@ -1,0 +1,26 @@
+{
+    "name": "hhansen06/taktischezeichen",
+    "description": "Creates taktische zeichen based on the suggestions from SKK",
+    "type": "library",
+    "require": {
+        "meyfa/php-svg": "^0.14.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hhansen06\\Taktischezeichen\\": "src/"
+        },
+        "files": [
+            "src/Taktischezeichen.php",
+            "src/Fahrzeug.php",
+            "src/Einheit.php",
+            "src/Konstanten.php",
+            "src/Person.php"
+        ]
+    },
+    "authors": [
+        {
+            "name": "Henrik Hansen",
+            "email": "hhansen06@googlemail.com"
+        }
+    ]
+}
