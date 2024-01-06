@@ -1,10 +1,10 @@
 <?php
 
-namespace hhansen06\Taktischezeichen;
+namespace Hhansen06\Taktischezeichen;
 
 use SVG\Nodes\Shapes\SVGRect;
 
-class Einheit extends \hhansen06\Taktischezeichen\Taktischezeichen
+class Einheit extends Taktischezeichen
 {
     function basisshape()
     {

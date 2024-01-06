@@ -1,13 +1,13 @@
 <?php
 
-namespace hhansen06\Taktischezeichen;
+namespace Hhansen06\Taktischezeichen;
 
 use SVG\Nodes\Shapes\SVGCircle;
 use SVG\Nodes\Texts\SVGText;
 use SVG\SVG;
 use SVG\Nodes\Shapes\SVGRect;
 use SVG\Nodes\Shapes\SVGPath;
-use hhansen06\Taktischezeichen\Fahrzeug;
+use Hhansen06\Taktischezeichen\Icons\Icons\Fahrzeug;
 use SVG\Nodes\Shapes\SVGPolyline;
 
 class Taktischezeichen

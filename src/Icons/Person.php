@@ -1,45 +1,26 @@
 <?php
 
-namespace Hhansen06\Taktischezeichen;
+namespace Hhansen06\Taktischezeichen\Icons;
 
-use SVG\Nodes\Shapes\SVGCircle;
-use SVG\Nodes\Texts\SVGText;
-use SVG\SVG;
-use SVG\Nodes\Shapes\SVGRect;
 use SVG\Nodes\Shapes\SVGPath;
-use Hhansen06\Taktischezeichen\Icons\Icons\Fahrzeug;
-use SVG\Nodes\Shapes\SVGPolyline;
 
-class Person
+
+class Person extends IconAbstract
 {
-    var $fontfamiliy = "Arial";
+    use IconTrait;
 
-    var $image;
-    var $doc;
-    var $width = 400;
-    var $height = 400;
-    function __construct()
-    {
-        $this->image = new SVG($this->width, $this->height);
-        $this->doc = $this->image->getDocument();
-        $d = "
-                M 200 10
-                L 10  200
-                L 200 390
-                L 390 200
-                L 200 10
-                ";
-        $poli = new SVGPath($d);
-        $poli->setStyle('fill', "none");
-        $poli->setStyle('stroke', "#000");
-        $poli->setStyle('stroke-width', '4');
-        $this->doc->addChild($poli);
-    }
+    const PERSON_VERLETZT   = 1;
+    const PERSON_TOD        = 2;
+    const PERSON_VERMISST   = 3;
 
-    function zustand($typ)
+    public $fontfamiliy = "Arial";
+    public $width = 400;
+    public $height = 400;
+
+    public function zustand($typ)
     {
         switch ($typ) {
-            case person_verletzt:
+            case 1:
                 $d = "
                 M 200 10
                 L 200 390
@@ -51,7 +32,7 @@ class Person
                 $this->doc->addChild($poli);
                 break;
 
-            case person_tod:
+            case 2:
                 $d = "
                 M 200 10
                 L 200 390
@@ -65,7 +46,7 @@ class Person
                 $poli->setStyle('stroke-width', '4');
                 $this->doc->addChild($poli);
                 break;
-            case person_vermisst:
+            case 3:
                 $d = "
                     M 180 10
                     L 7 180
@@ -86,11 +67,18 @@ class Person
                 $this->doc->addChild($poli);
                 break;
         }
-    }
 
-    function render()
-    {
-        header('Content-Type: image/svg+xml');
-        echo $this->image;
+        $d = "
+                M 200 10
+                L 10  200
+                L 200 390
+                L 390 200
+                L 200 10
+                ";
+        $poli = new SVGPath($d);
+        $poli->setStyle('fill', "none");
+        $poli->setStyle('stroke', "#000");
+        $poli->setStyle('stroke-width', '4');
+        $this->doc->addChild($poli);
     }
 }

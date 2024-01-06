@@ -1,6 +1,6 @@
 <?php
 
-namespace hhansen06\Taktischezeichen;
+namespace Hhansen06\Taktischezeichen;
 
 const Trupp = 1;
 const Gruppe = 2;

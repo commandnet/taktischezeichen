@@ -1,14 +1,14 @@
 <?php
 
-namespace hhansen06\Taktischezeichen;
+namespace Hhansen06\Taktischezeichen;
 
 use SVG\Nodes\Shapes\SVGPath;
 use SVG\Nodes\Shapes\SVGCircle;
-use hhansen06\Taktischezeichen\Fahrzeugarten;
+use Hhansen06\Taktischezeichen\Icons\Icons\Fahrzeugarten;
 use SVG\Nodes\Shapes\SVGLine;
 use SVG\Nodes\Texts\SVGText;
 
-class Fahrzeug extends \hhansen06\Taktischezeichen\Taktischezeichen
+class Fahrzeug extends Taktischezeichen
 {
     function basisshape()
     {
